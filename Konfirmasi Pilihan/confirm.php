@@ -13,10 +13,11 @@
 
 </head>
 <?php
+
+use function PHPSTORM_META\elementType;
+
 require 'koneksi.php';
 error_reporting(0);
-
-
 $id =  $_POST["id-game"];
 $voucher =  $_POST["opsi-voucher"];
 $email = $_POST["email"];
@@ -28,24 +29,31 @@ $Game = $_POST["namaGame"];
 $eyemoney = eyemoney($Game);
 
 
-if (isset($_POST["terima"])) {
+
+if (isset($_POST['terima'])) {
 
     if (input_data($_POST) > 0) {
         echo "
             <script>
-            document.location.href = '../Confirm Payment/index.html';
+            //alert('Data Berhasil masuk !');
             </script>
         ";
     } else {
         echo "<script>
             alert('Pembayaran Gagal !');
-            document.location.href = '../Confirm Payment/index.html';
+            //document.location.href = '../Confirm Payment/index.html';
             </script>
             ";
     }
+} else {
+    if (input_data($_POST) > 0) {
+        echo "
+            <script>
+            //alert('Data Berhasil Tidak masuk !');
+            </script>
+        ";
+    }
 }
-
-
 ?>
 
 <body>
@@ -86,7 +94,7 @@ if (isset($_POST["terima"])) {
                         Total Pembayaran :&emsp;&emsp;&emsp;&emsp;&emsp;<?php echo "Rp. " ?> <?php echo number_format($harga); ?>
                     </p>
                     <!--Start Input-->
-                    <input type="hidden" name="id" value='<?php echo $id; ?> '>
+                    <input type="hidden" name="id-game" value='<?php echo $id; ?> '>
                     <input type="hidden" name="voucher" value='<?php echo $voucher; ?> '>
                     <input type="hidden" name="harga" value='<?php echo $harga; ?> '>
                     <input type="hidden" name="payment" value='<?php echo $payment; ?> '>

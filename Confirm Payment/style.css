@@ -48,13 +48,13 @@ button {
 }
 
 .bacaan p {
-  color: #e2e3e3;
+  color: #6db270;
   transition: all 0.3s ease 0s;
   font-weight: bold;
 }
 
 .bacaan p:hover {
-  color: #6db270;
+  color: #e2e3e3;
 }
 
 .contact button {
