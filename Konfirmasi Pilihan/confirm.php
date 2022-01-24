@@ -96,13 +96,13 @@ if (isset($_POST["terima"])) {
                     <div style="text-align:right; margin-top: 15vh;">
 
                         <a href="javascript:history.back()">
-                            <input type="button" class="input" value="Batalkan">
+                            <input type="button" class="input" value="Back">
                         </a>
                         <button type="button" class="input" name="terima" id="btn">
-                            Terima</button>
-                        <a href="../Confirm Payment/index.html">
+                            Confirm</button>
+                        <!-- <a href="../Confirm Payment/index.html">
                             <input type="button" class="input" value="Konfirm">
-                        </a>
+                        </a> -->
                     </div>
                 </form>
             </div>
