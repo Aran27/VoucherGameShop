@@ -126,21 +126,3 @@ function showingPrice(priceIndex, gameIndex){
 function numberComa(slay){
    return slay.toLocaleString();
 }
-
-function notNull(){
-    const nVoc = document.getElementById('nVoc');
-    const nPay = document.getElementById('nPay');
-    const nForm = document.getElementById('nForm');
-
-    nForm.addEventListener('submit', (e) => {
-        let massages = [];
-        if(nVoc.value ==='' || nVoc.value == null){
-            massages.push('Voucher yang Anda tuan');
-        }
-
-        if(massages.length > 0){
-            e.preventDefault()
-            alert(massages.join(', '))
-        }
-    })
-}

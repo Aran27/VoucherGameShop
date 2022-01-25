@@ -14,7 +14,7 @@
 </head>
 <?php
 
-use function PHPSTORM_META\elementType;
+
 
 require 'koneksi.php';
 error_reporting(0);
